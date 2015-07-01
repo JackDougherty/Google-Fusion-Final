@@ -73,7 +73,7 @@
         // Also, if your geocoded data column is not named "Location," change it below to match yours
         var layer = new google.maps.FusionTablesLayer({
           query: {
-            select: 'Location',
+            select: 'Address',
             from: '1RXgs33--EUO1ARJsNr0VQwju9TyebQpkuBlbxmlF'
           },
           map: map
@@ -82,13 +82,11 @@
         var legend = document.createElement('div');
         legend.id = 'legend';
         var content = [];
-        content.push('<h3>Butterflies*</h3>');
-        content.push('<p><div class="color red"></div>Battus</p>');
-        content.push('<p><div class="color yellow"></div>Speyeria</p>');
-        content.push('<p><div class="color green"></div>Papilio</p>');
-        content.push('<p><div class="color blue"></div>Limenitis</p>');
-        content.push('<p><div class="color purple"></div>Myscelia</p>');
-        content.push('<p>*Data is fictional</p>');
+        content.push('<h3>Company</h3>');
+        content.push('<p><div class="color green"></div>The Fresh Market</p>');
+        content.push('<p><div class="color blue"></div>Whole Foods Market</p>');
+        content.push('<p><div class="color yellow"></div>Sprouts Farmers Market</p>');
+        content.push('<p>*Only US locations</p>');
         legend.innerHTML = content.join('');
         legend.index = 1;
         map.controls[google.maps.ControlPosition.RIGHT_BOTTOM].push(legend);
